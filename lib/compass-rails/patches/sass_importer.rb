@@ -13,7 +13,7 @@ module Sprockets
         :line => line,
         :syntax => syntax,
         :cache_store => cache_store,
-        :importer => SassImporter.new(context, context.pathname),
+        :importer => SassImporter.new(context),
         :load_paths => paths,
         :sprockets => {
           :context => context,
