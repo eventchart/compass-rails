@@ -4,7 +4,7 @@ module Sprockets
       # Use custom importer that knows about Sprockets Caching
       cache_store = SassCacheStore.new(context.environment)
       paths  = context.environment.paths.map { |path| CompassRails::SpriteImporter.new(context, path) }
-      paths += context.environment.paths.map { |path| SassImporter.new(context, path) }
+      paths += context.environment.paths.map { |path| SassImporter.new(context) }
       paths += ::Rails.application.config.sass.load_paths
 
 
